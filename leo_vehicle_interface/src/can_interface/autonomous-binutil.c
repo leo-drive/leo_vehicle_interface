@@ -36,13 +36,13 @@ uint32_t autonomous_Receive(autonomous_rx_t* _m, const uint8_t* _d, uint32_t _id
     if (_id == 0x1DEF0412U) {
      recid = Unpack_VEHICLE_SIGNAL_STATUS_autonomous(&(_m->VEHICLE_SIGNAL_STATUS), _d, dlc_);
     } else if (_id == 0x1DEF0413U) {
-     recid = Unpack_MOTION_INFO_autonomous(&(_m->MOTION_INFO), _d, dlc_);
+     recid = Unpack_MODULE_INFO_autonomous(&(_m->MODULE_INFO), _d, dlc_);
     }
    } else {
     if (_id == 0x1DEF0414U) {
      recid = Unpack_MOTOR_INFO_autonomous(&(_m->MOTOR_INFO), _d, dlc_);
     } else if (_id == 0x1DEF0415U) {
-     recid = Unpack_VEHICLE_ERRORS_autonomous(&(_m->VEHICLE_ERRORS), _d, dlc_);
+     recid = Unpack_CONTROL_STATUS_autonomous(&(_m->CONTROL_STATUS), _d, dlc_);
     }
    }
   }
