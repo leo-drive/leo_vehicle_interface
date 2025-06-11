@@ -34,7 +34,6 @@
 #include "leo_vehicle_interface_msgs/msg/module_info.hpp"
 #include "leo_vehicle_interface_msgs/msg/motor_info.hpp"
 #include "leo_vehicle_interface_msgs/msg/throttle_module_status.hpp"
-#include "leo_vehicle_interface_msgs/msg/vehicle_errors.hpp"
 #include "leo_vehicle_interface_msgs/msg/vehicle_info.hpp"
 #include "leo_vehicle_interface_msgs/msg/vehicle_signal_status.hpp"
 #include "leo_vehicle_interface_msgs/msg/wheel_speeds.hpp"
@@ -94,8 +93,6 @@ private:
       motor_info_pub_;
   rclcpp::Publisher<leo_vehicle_interface_msgs::msg::ThrottleModuleStatus>::
       SharedPtr throttle_module_status_pub_;
-  rclcpp::Publisher<leo_vehicle_interface_msgs::msg::VehicleErrors>::SharedPtr
-      vehicle_errors_pub_;
   rclcpp::Publisher<leo_vehicle_interface_msgs::msg::VehicleInfo>::SharedPtr
       vehicle_info_pub_;
   rclcpp::Publisher<leo_vehicle_interface_msgs::msg::VehicleSignalStatus>::
